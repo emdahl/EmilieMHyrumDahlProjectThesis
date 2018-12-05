@@ -26,7 +26,7 @@ In equation \ref{eq:int}, $I_{\lambda}$ represents the light intensity at a give
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=\linewidth]{Images/theory/reflectance.png}
+  \includegraphics[width=12cm]{Images/theory/reflectance.png}
   \caption{Light refraction in liquid}
   \label{fig:reflectance}
 \end{figure}
@@ -47,7 +47,7 @@ From figure \ref{fig:lightinwater}, it can be observed that the intensity of the
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=\linewidth]{Images/theory/intensity.png}
+  \includegraphics[width=12cm]{Images/theory/intensity.png}
   \caption{Light intensity in water.}
   \label{fig:lightinwater}
 \end{figure}
@@ -55,7 +55,7 @@ From figure \ref{fig:lightinwater}, it can be observed that the intensity of the
 As shown in the figure \ref{fig:lightinwater}, the light intensity decreases exponentially. The figure, is based on the following equation for the light source, S. 
 
 \begin{equation} \label{eq:source}
-S_{\lambda} (z) = S_0 \cdot exp (-c_{\lambda} cdot r)
+S_{\lambda} (z) = S_0 \cdot exp (-c_{\lambda} \cdot r)
 \end{equation}
 
 In eq \ref{eq:source}, $S_{\lambda}$ describes the light intensity at wavelength $\lambda$, while $S_0$ is the intensity at the light source. Furthermore, r describes the distance between the light source and the viewpoint, while $c_{\lambda}$ is the attenuation coefficient of the wavelength $\lambda$, illustrated by figure \ref{fig:attcoeff}.
@@ -70,7 +70,7 @@ When interpreting eq \ref{eq:intw}, one can see that the intensity of light decr
 
 \begin{figure}[H]
 \centering
-  \includegraphics[width=\linewidth]{Images/theory/attcoeff.png}
+  \includegraphics[width=12cm]{Images/theory/attcoeff.png}
   \caption{Attenuation coefficient}
   \label{fig:attcoeff}
 \end{figure}
@@ -84,6 +84,7 @@ When interpreting eq \ref{eq:intw}, one can see that the intensity of light decr
 Note: If cameras and objects are in the different condition where the refraction index differs from each other, several problems occur and a precise measurement cannot be achieved.
 
 \section{Optical Fingerprints and Reflectance - IOP}
+\todo[inline]{gå gjennom denne seksjonen + optical properties: Absorption and Scattering fra Silja}
 %Underwater hyperspectral imaging: a new tool for marine archaeology 2018, ØYVIND ØDEGÅRD,1,2,* AKSEL ALSTAD MOGSTAD,3 GEIR JOHNSEN,3 ASGEIR J. SØRENSEN, AND MARTIN LUDVIGSEN1
 Raw data consists of more than upwelling radiance reflected from the object. Reflections from the water column, ambient light and noise sensors are all parts of the data collected. However, the spectral reflectance reference is independent of the illumination and the water column properties. 
 
@@ -99,6 +100,9 @@ Where Lu(λ) denotes the raw data of the object, including signature from light 
 
 Note: For eq \ref{eq:specref} to hold true, all surfaces are assumed to behave like Lambertian reflectors. 
 %The use of underwater hyperspectral imaging deployed on remotely operated vehicles – methods and applications - geir og asgeir
+
+\subsection{IOP}
+
 
 \section{The Digital Image}
 %evt Fysikken bak bildet 
@@ -149,6 +153,9 @@ This way, the resulting image of the target includes a complete spectrum for eac
 \\\\
 %The spectral information in every pixel creates a third dimension, providing a collection of data called a data cube. Now, how does this data differ from the data and images from other types of cameras? Digital camera, shoots the target in red, green and blue, in order to match the human vision. These camera leaves a combination of the three colors, which is what we can see with our eyes. This means that the information constituting the third dimension consists of nothing more than three colors, while the hyperspectral camera records hundreds of wavelengths. This way, the hyperspectral camera can collect more detailed information about the target, not only in visible light, but also in infrared and ultra violet. By combining different wavelengths, pixel by pixel, one can extract useful information about the properties of the target. 
 
+
+
+
 %Hyperspectral imaging and data analysis for detecting and determining plastic contamination in seawater filtrates, 2016,  Bert van Bavela
 %http://journals.sagepub.com/doi/pdf/10.1255/jnirs.1212
 Concerning plastics, this translates to receiving information on both spatial location of plastic material, and the plastic materials composition. 
@@ -179,7 +186,7 @@ figuren er hentet fra boken, techniques and applications of hyperspectral image 
 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=8cm]{Images/theory/voxel.png}
+  \includegraphics[height=6cm]{Images/theory/voxel.png}
   \caption{Resulting scan}
   \label{fig:voxel2}
 \end{figure}
@@ -199,35 +206,93 @@ figuren er hentet fra boken, techniques and applications of hyperspectral image 
 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=8cm]{Images/theory/pushbroom.png}
+  \includegraphics[height=6cm]{Images/theory/pushbroom.png}
   \caption{Resulting scan}
   \label{fig:pushbroom}
 \end{figure}
-
 
 \section{Geo Reference}
 
 
 \section{Silhouette Camera}
+https://github.com/emlynjdavies/PySilCam/wiki 
 
 
 
+\section{Microplastic}
+%ha med hva def av mikroplast og de ulike plasttypene
+Kjemi
 
-\section{Micro-plastics}
-Herunder mikroplast. Plastens generelle oppførsel og kjemi?
-\subsection{PP}
-\subsection{PVC}
-\subsection{PE}
-\subsection{PET}
-\subsection{PS}
+As mentioned, plastics have permeated almost every aspect of modern day life with its large applicability. We find plastics in the microchips in our computers, as well as in the bags we carry our groceries in. It seems that plastic covers a wide spectrum of applications.  One reason to this, is the many different types of plastic, covering different areas of need. Polyethylene (PE), polypropylene (PP), polyethylene terephthalate (PET), polyvinyl chloride (PVC) and polystyrene (PS), are the five most common types of plastic, covering a large \todo{hvor mye? kan summere opp alle prosentene fra wiki: 34 + } percent of the global plastic production. Besides containing Carbon-Hydrogen bindings, these are all structurally different and they are classified according to their chemical structure. 
+
+%Plastic polymers commonly found in the environment are polypropylene (PP), polyethylene (PE), polyethylene terephthalate (PET), polystyrene (PS) and polyvinylchloride (PVC).8 Together these comprise 72.9 percent of the plastic produced globally.9
+
+\subsection{Polyethylene}
+The molecules in polyethylene (PE) has the chemical formula C2H4 \todo{figur av struktur}. Polyethylene is the most common type of plastic, with 34\% of all plastic produced being PE. The reason to its commonness is the broad application of it in consumer products. Plastic bags, bottles and food wrapping are good examples of polyethylene. However, these three products seem to have a significantly different material. For instance are plastic bags rarely as rigid and as bottles. This variation in polyethylene creates two sub-types defined by the degree of density – HDPE and LDPE, high-density polyethylene and low-density polyethylene respectively. 
+
+The LPDE-molecules are more branched, meaning that a chain is replacing for instance a hydrogen atom. As a result of this, the molecules are less tightly packed, leading to a lower density.  As LDPE has more branching than HDPE, its intermolecular forces are weaker. \todo{FIGUR av branch-forskjellene!}
+
+
+\subsection{Polypropylene}
+Polypropylene (PP) is the second most common plastic consistent of propylene with the chemical formula C3H6. PP has properties similar to polyethylene, but it is slightly harder and more resistant to fatigue. The plastic type is found in a variety of products like food packaging, labeling and clothing. 
+
+\subsection{Polyvinyl Chloride}
+%http://www.plasticmoulding.ca/polymers/pvc.htm
+Polyvinyl chloride (PVC) with a number of vinyl chloride molecules formulated by C2H3Cl, is in third place of the most produced types of plastic. PVC can be both rigid and flexible. The rigid form is used in constructional application in piping and electrical wire insulation, while the softer and more flexible form is used in many applications replacing rubber. 
+
+\subsection{Polyethylene terephthalate (PET)}
+Polyethylene terephthalate (PET): Commonly known as polyester. One of the most widely used type of plastic. It is used in a wide range of articles, from plastic bags to clothing and beverage containers.
+
+\subsection{Polystyrene (PS)}
+Polystyrene (PS): An inexpensive type of polastic and is therefore often used in disposable plastic objects, such as cutlery, containers and other types of packaging
 
 
 
-\section{Principle Component Analysis}
+\section{Principal Component Analysis}
 
+The purpose of conducting a principal component analysis is to extract the information from the data, while disregarding the noise, reducing the dimension of the dataset. The analysis converts a set of observations of possibly correlated variables into a set of values of linearly uncorrelated variables called principal components. These principal components will describe the overall variation of the dataset and thereby serve as a latent variable. 
+\\\\
+Now, how are these principal components found? Figure a) below describes the entire dataset with the dots describing single data observations. The analysis starts by finding the projection of each observation onto a line. The line is drawn with the purpose of explaining as many observations as possible with a minimal residual error, b). The distance from the origin to this projected point along the line is the score associated with the related observation. The direction of the line is now characterized with giving the largest variance of the scores, and is described by direction vectors called loadings. 
+\\\\
+%Simply put, the original data is estimated by multiplying the scores with the associated loadings.
+This first line created is called the first principal component. The second principal component, c), is perpendicular to the first component’s direction and is otherwise found the same way. This way, the first principal component has the largest possible variance. Each following component will, in turn, have the highest variance possible under the constraint that it is perpendicular to the previous components. 
+
+%FIGURENE:
+%https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/geometric-explanation-of-pca
+\begin{figure}[H]
+  \newcommand*\FigVSkip{0.5em}
+  \newcommand*\FigHSkip{0.1em}
+  \newsavebox\FigBox
+  \centering
+  % Top image is centered, so no need to get width
+\sbox{\FigBox}{\includegraphics[scale=0.4]{Images/theory/koord.png}}
+  \begin{minipage}{\wd\FigBox}
+    \centering\usebox{\FigBox}
+    \subcaption{a) Scaled and centered data observations}
+  \end{minipage}
+ \sbox{\FigBox}{\includegraphics[scale=0.4]{Images/theory/1pc.png}}
+  \begin{minipage}{\wd\FigBox}
+    \centering\usebox{\FigBox}
+    \subcaption{\newline b) Including first principal component}
+  \end{minipage}
+  % Save first image in a box to get the width
+  \sbox{\FigBox}{\includegraphics[scale=0.4]{Images/theory/2pc.png}}
+  \begin{minipage}{\wd\FigBox}
+    \centering\usebox{\FigBox}
+    \subcaption{c) Including second principal component}
+  \end{minipage}\hspace*{\FigHSkip}
+  % Save second image 
+  \label{head}
+\end{figure}
+
+
+
+\todo[inline]{Skrive om den under til både forsøksrelevant og ny}
 %Underwater hyperspectral imaging: a new tool for marine archaeology 2018, ØYVIND ØDEGÅRD,1,2,* AKSEL ALSTAD MOGSTAD,3 GEIR JOHNSEN,3 ASGEIR J. SØRENSEN, AND MARTIN LUDVIGSEN1
-To assess the spectral relationship between different objects and materials, principal component analyses were performed on the laboratory-acquired reflectance data. The principal compo- nents can be seen as the axes in an ellipsoid with n dimensions that describes the data. The longest axis accounts for the largest variance in the data, and corresponds to principal component 1 (PC1). The second-longest axis corresponds to PC2, and so on.
+To assess the spectral relationship between different objects and materials, principal component analyses were performed on the laboratory-acquired reflectance data. The principal components can be seen as the axes in an ellipsoid with n dimensions that describes the data. The longest axis accounts for the largest variance in the data, and corresponds to principal component 1 (PC1). The second-longest axis corresponds to PC2, and so on.
 
+\subsection{Scores, Loadings, F-residuals, Hotellings T^2 }
+https://learnche.org/pid/latent-variable-modelling/principal-component-analysis/interpreting-the-residuals
 
 \section{Sensor Carrying Platform}
 %ulike sensorer for deteksjon og kartlegging (vise sammenhengen til dette og en bredere oversikt - dette blir isåfall bare her, men tas ikke med videre - i metode kan vi heller si at vi avgrenser mot cam. + aktuelle sensorer
