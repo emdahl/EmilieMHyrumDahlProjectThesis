@@ -83,8 +83,40 @@ When interpreting eq \ref{eq:intw}, one can see that the intensity of light decr
 %http://www.robot.t.u-tokyo.ac.jp/~yamashita/paper/B/B047Final.pdf
 Note: If cameras and objects are in the different condition where the refraction index differs from each other, several problems occur and a precise measurement cannot be achieved.
 
-\section{Optical Fingerprints and Reflectance - IOP}
-\todo[inline]{gå gjennom denne seksjonen + optical properties: Absorption and Scattering fra Silja}
+\section{Inherent Optical Properties}
+%http://iopscience.iop.org/article/10.1088/0034-4885/36/12/002/pdf
+
+
+%noe av dette har blitt sagt i hyp også:
+When retrieving an optical fingerprint it is important to know the optical properties impacting the resulting signature. There are mainly three physical processes reducing the energy of light on its way to reaching the receiver. The object of interest (the materials or the compositions of materials) will absorb, scatter and reflect light of different portions of the visible spectrum. This way, the material of the object of interest and the wavelength will affect the properties of these processes. 
+
+Scattering, absorption and reflection are both a result of photons interacting with the object of interest. 
+
+%http://www.oceanopticsbook.info/view/overview_of_optical_oceanography/inherent_optical_properties
+\subsection{Absorption}
+During the photon-IOO interaction, the energy of the photon can be converted to another form, leaving the photon to disappear and hence the light to be absorbed. 
+
+%https://www.physicsclassroom.com/class/light/Lesson-2/Light-Absorption,-Reflection,-and-Transmission
+Atoms and thereby molecules contain elections. Given the specific atom, these electrons hold a specific natural frequency. Whenever light hits these molecules, the electrons in that molecule will be given a vibrating motion if the frequency of the light is equal to the electrons natural frequency. This vibration is causing energy – energy taken from the lights photons. This way, the electrons absorb the energy of the light by turning it in to vibration energy, which cannot be converted back to light. 
+
+Different atoms will absorb light at different wavelengths, because they hold different sets of natural vibration frequencies. 
+
+\todo[inline]{pluss coeff og internsitets-likn?}
+\todo[inline]{pluss figur?}
+
+\subsection{Scattering}
+During the photon-IOO interaction, the photon might either change its direction, its energy or both. Either of these processes are called scattering. %http://iopscience.iop.org/article/10.1088/0034-4885/36/12/002/pdf 
+More precisely, scattering can be defined as \textit{the change in direction of light flux produced by individual parcels of particulate matter called ‘scatterers’}. This means that light, or other moving particles, are forced to deviate from the straight trajectory they were on to being with, due to the collision between the light wave and the OOI. 
+
+%http://www.oceanopticsbook.info/view/overview_of_optical_oceanography/inherent_optical_properties 
+As mentioned, these inherent optical properties are again dependent on many other properties. Different materials absorb and scatter very much differently as a function of wavelength. If comparing to particles with the same volume, they will scatter light differently if are of different shapes. Similarly, particles with exact same shape will scatter light differently whenever the volume of the particles differ. A change in the material, size or shape (or the composition of them) will give different IOPs. 
+
+In the ocean, the physical characteristics of the IOO are highly affected by the surroundings, implying that the IOPs are too. As an example, a change in the concentration of plankton or being in coastal waters instead of the open ocean, will contribute to a significant change in both the resulting absorption and scattering. 
+
+
+\subsection{Spectral Reflectance}
+%SKRIV OM DENNE
+
 %Underwater hyperspectral imaging: a new tool for marine archaeology 2018, ØYVIND ØDEGÅRD,1,2,* AKSEL ALSTAD MOGSTAD,3 GEIR JOHNSEN,3 ASGEIR J. SØRENSEN, AND MARTIN LUDVIGSEN1
 Raw data consists of more than upwelling radiance reflected from the object. Reflections from the water column, ambient light and noise sensors are all parts of the data collected. However, the spectral reflectance reference is independent of the illumination and the water column properties. 
 
@@ -96,12 +128,10 @@ The spectral reflectance or ‘optical fingerprint’ can be described as a perc
     R(\lambda) = \frac{Lu(\lambda)}{Ed(\lambda)}
 \end{equation}
 
-Where Lu(λ) denotes the raw data of the object, including signature from light source, while Ed(λ) is the spectral radiance from measurements of spectrally neutral reflectance standard.
+Where $Lu(\lambda)$ denotes the raw data of the object, including signature from light source, while $Ed(\lambda)$ is the spectral radiance from measurements of spectrally neutral reflectance standard.
 
 Note: For eq \ref{eq:specref} to hold true, all surfaces are assumed to behave like Lambertian reflectors. 
 %The use of underwater hyperspectral imaging deployed on remotely operated vehicles – methods and applications - geir og asgeir
-
-\subsection{IOP}
 
 
 \section{The Digital Image}
@@ -137,6 +167,8 @@ For a human eye to be able to perceive a color image, only three wavelengths / l
 
 \section{Imaging Process}
 %Denne skal jeg få tilsendt av Asgeir
+???????????
+
 
 \section{Hyperspectral Imaging}
 %Use of Underwater Hyperspectral Imager (UHI) in Marine Archaeology 2014, Øyvind Ødegård1,3, Geir Johnsen2 and Asgeir J. Sørensen1
@@ -144,11 +176,14 @@ For a human eye to be able to perceive a color image, only three wavelengths / l
 Hyperspectral imagery is defined as images that contain a spectrum of reflected light with a spectral resolution of 1-5 nm per image pixel (4). Materials or compositions of materials (object of interest, OOI) will absorb, scatter and reflect light of different portions of the visible spectrum, giving them their own optical fingerprints that are unique, and can be used for classification with high degree of confidence (4). 
 
 %Info hentet fra yt
-In order to study the reflecting light from the target, one need a spectrometer. A spectrometer is an instrument that splits the incoming light into a spectrum. Measuring this reflectance spectra is the most common way to use hyperspectral imaging.
+In order to study the reflecting light from the target, a spectrometer is needed. A spectrometer is an instrument that splits the incoming light into a spectrum. Measuring this reflectance spectra is the most common way to use hyperspectral imaging.
+
+\todo[inline]{Masse mer fra modul om hvordan spektrometer fungerer}
+
 \\\\
 Hyperspectral imaging uses an imaging spectrometer (also called a hyperspectral camera) to collect spectral information. As mentioned, the difference between a hyperspectral image and a regular photo, is that the hyperspectral camera measures hundreds of thousands of spectra instead of single spectrum, creating a multispectral image. But in contrast to multispectral imagers, which are sensitive in only a few selected wavebands, hyperspectral imagers (HI) measure the spectral upwelling radiance Lu(λ) or reflectance R (λ) per image pixel of bio-geo-chemical object of interest (Klonowski et al. 2007; Volent et al. 2007; Johnsen et al. 2009, 2013b). %(Development of hyperspectral imaging as a bio-optical taxonomic tool for pigmented marine organisms - geir)
 
-This way, the resulting image of the target includes a complete spectrum for each pixel in the image. By doing this, it is possible to determine what the image is actually showing. 
+This way, the resulting image of the target includes a complete spectrum for each pixel in the image. By doing this, it is possible to extract useful information about the image. 
 
 \\\\
 %The spectral information in every pixel creates a third dimension, providing a collection of data called a data cube. Now, how does this data differ from the data and images from other types of cameras? Digital camera, shoots the target in red, green and blue, in order to match the human vision. These camera leaves a combination of the three colors, which is what we can see with our eyes. This means that the information constituting the third dimension consists of nothing more than three colors, while the hyperspectral camera records hundreds of wavelengths. This way, the hyperspectral camera can collect more detailed information about the target, not only in visible light, but also in infrared and ultra violet. By combining different wavelengths, pixel by pixel, one can extract useful information about the properties of the target. 
@@ -211,40 +246,56 @@ figuren er hentet fra boken, techniques and applications of hyperspectral image 
   \label{fig:pushbroom}
 \end{figure}
 
-\section{Geo Reference}
+\section{Georeferencing}
+
+%http://www.gisresources.com/georeferencing-2/
+In raster system, points are represented by single cells, lines by sequence of neighboring cells and area by collection of continuous cells
+
+%http://desktop.arcgis.com/en/arcmap/10.3/manage-data/raster-and-images/fundamentals-for-georeferencing-a-raster-dataset.htm
+Georeferencing means to relate an internal coordinate system to a spatial coordinate system. The internal coordinate system could for instance be a raster image of a map. 
+
+%http://www.gisresources.com/georeferencing-2/
+Note that raster systems represents points by single cells and lines by several neighboring cells. Areas are represented by a collection of continuous cells. 
+
+In order to georeference an image, control points need to be established. These control points are identified as a series of known x- and y-coordinates, linking locations in the raster dataset to its correspondant location in the spatially referenced data. The desired objective is to assign these coordinate systems to each other with minimal residuals. This means that the distance between the control points’ actual coordinates and the coordinates predicted by the model is the smallest is can be, making the process as accurate as possible. This way, georeferencing can explain how data, such as GPS points, are related to images.
 
 
-\section{Silhouette Camera}
-https://github.com/emlynjdavies/PySilCam/wiki 
+\section{SINTEF SilCam}
+%https://github.com/emlynjdavies/PySilCam/wiki 
+The silhouette camera, SINTEF SilCam, is a holographic imager designed to overcome the limitations in depth-of-field scenarios related to restricted path length, which is a challenge when using today's conventional lens-based imaging. 
 
+In order to reduce noise, each image is corrected using a clean background. From this, it is possible to produce a logical image of the particles detected, containing only zeros and ones. In turn, particle properties for each particle can be calculated from the binary image.
+
+This way, the system can be used for both large- and small-scale experiments. In smaller scale, the SilCam is able to quantify the distribution of suspended material. Zoo-plankton, larger phyto-plankton, mineral grains and marine snow are all examples of objects the SilCam can detect. 
 
 
 \section{Microplastic}
 %ha med hva def av mikroplast og de ulike plasttypene
-Kjemi
-
-As mentioned, plastics have permeated almost every aspect of modern day life with its large applicability. We find plastics in the microchips in our computers, as well as in the bags we carry our groceries in. It seems that plastic covers a wide spectrum of applications.  One reason to this, is the many different types of plastic, covering different areas of need. Polyethylene (PE), polypropylene (PP), polyethylene terephthalate (PET), polyvinyl chloride (PVC) and polystyrene (PS), are the five most common types of plastic, covering a large \todo{hvor mye? kan summere opp alle prosentene fra wiki: 34 + } percent of the global plastic production. Besides containing Carbon-Hydrogen bindings, these are all structurally different and they are classified according to their chemical structure. 
+%Kjemi
+\todo[inline]{ta med figur av alles struktur?}
+As mentioned, plastics have permeated almost every aspect of modern day life with its large applicability. We find plastics in the microchips in our computers, as well as in the bags we carry our groceries in. It seems that plastic covers a wide spectrum of applications.  One reason to this, is the many different types of plastic, covering different areas of need. Polyethylene (PE), polypropylene (PP), polyethylene terephthalate (PET), polyvinyl chloride (PVC) and polystyrene (PS), are the five most common types of plastic, in large part covering of the global plastic production. Besides containing Carbon-Hydrogen bindings, these are all structurally different and they are classified according to their chemical structure. In this section, these five types of plastic are presented in decreasing order. 
 
 %Plastic polymers commonly found in the environment are polypropylene (PP), polyethylene (PE), polyethylene terephthalate (PET), polystyrene (PS) and polyvinylchloride (PVC).8 Together these comprise 72.9 percent of the plastic produced globally.9
 
 \subsection{Polyethylene}
-The molecules in polyethylene (PE) has the chemical formula C2H4 \todo{figur av struktur}. Polyethylene is the most common type of plastic, with 34\% of all plastic produced being PE. The reason to its commonness is the broad application of it in consumer products. Plastic bags, bottles and food wrapping are good examples of polyethylene. However, these three products seem to have a significantly different material. For instance are plastic bags rarely as rigid and as bottles. This variation in polyethylene creates two sub-types defined by the degree of density – HDPE and LDPE, high-density polyethylene and low-density polyethylene respectively. 
+The molecules in polyethylene (PE) has the chemical formula $C_2H_4$ \todo{figur av struktur}. Polyethylene is the most common type of plastic, with 34\% of all plastic produced being PE. The reason to its commonness is the broad application of it in consumer products. Plastic bags, bottles and food wrapping are good examples of polyethylene. However, these three products seem to have a significantly different material. For instance are plastic bags rarely as rigid and as bottles. This variation in polyethylene creates two sub-types defined by the degree of density – HDPE and LDPE, high-density polyethylene and low-density polyethylene respectively. 
 
 The LPDE-molecules are more branched, meaning that a chain is replacing for instance a hydrogen atom. As a result of this, the molecules are less tightly packed, leading to a lower density.  As LDPE has more branching than HDPE, its intermolecular forces are weaker. \todo{FIGUR av branch-forskjellene!}
 
 
 \subsection{Polypropylene}
-Polypropylene (PP) is the second most common plastic consistent of propylene with the chemical formula C3H6. PP has properties similar to polyethylene, but it is slightly harder and more resistant to fatigue. The plastic type is found in a variety of products like food packaging, labeling and clothing. 
+Polypropylene (PP) is the second most common plastic consistent of propylene with the chemical formula $C_3H_6$. PP has properties similar to polyethylene, but it is slightly harder and more resistant to fatigue. The plastic type is found in a variety of products like food packaging, labeling and clothing. 
 
 \subsection{Polyvinyl Chloride}
 %http://www.plasticmoulding.ca/polymers/pvc.htm
-Polyvinyl chloride (PVC) with a number of vinyl chloride molecules formulated by C2H3Cl, is in third place of the most produced types of plastic. PVC can be both rigid and flexible. The rigid form is used in constructional application in piping and electrical wire insulation, while the softer and more flexible form is used in many applications replacing rubber. 
+Polyvinyl chloride (PVC) with a number of vinyl chloride molecules formulated by $C_2H_3Cl$, is in third place of the most produced types of plastic. PVC can be both rigid and flexible. The rigid form is used in constructional application in piping and electrical wire insulation, while the softer and more flexible form is used in many applications replacing rubber. 
 
-\subsection{Polyethylene terephthalate (PET)}
-Polyethylene terephthalate (PET): Commonly known as polyester. One of the most widely used type of plastic. It is used in a wide range of articles, from plastic bags to clothing and beverage containers.
+\subsection{Polyethylene terephthalate}
+Polyethylene terephthalate (PET) consist of repeating ethylene terephthalate molecules, holding the chemical formula $C_{10}H_8O_4$. Typically PET is used in plastic bottles and in fibers for clothing. For the latter use, the type is commonly known as polyester. Depending on the specific particle's size and crystal structure, the semi crystalline material, PET, might appear transparent. 
 
 \subsection{Polystyrene (PS)}
-Polystyrene (PS): An inexpensive type of polastic and is therefore often used in disposable plastic objects, such as cutlery, containers and other types of packaging
+%https://www.azom.com/article.aspx?ArticleID=7915
+Polystyrene (PS) is an inexpensive plastic type commonly used for packaging purposes, with the chemical formula being $(C_8H_8)_n$. PS increasingly exists in the outdoor environment, particularly along shores. The plastic is naturally clear, hard and brittle. The latter fact is perhaps the main reason to why larger pieces of PS easily turn into microplastic. 
 
 
 
